@@ -1,0 +1,108 @@
+html {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .header_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    font-size: 18px;
+    // background: #222;
+    span {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      color: #ffcd32;
+      font-size: 28px;
+    }
+    p {
+      display: flex;
+      width: 200px;
+      justify-content: center;
+      padding-left: 5%;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .main {
+    background: #222;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .detail_item_list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .item_list_con {
+        width: 95%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        dt{
+          width: 80px;
+          height: 80px;;
+          flex-shrink: 0;
+          color: #ffcd32;
+          display: flex;
+          font-size: 18px;
+          justify-content: center;
+          align-items: center;
+          img{
+              width: 40%;
+              height: 40%;
+          }
+        }
+        dd{
+           width: 100%;
+          height: 100%;;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        p {
+           text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 250px;
+          margin-top: 14px;
+          color: hsla(0,0%,100%,.3);
+          font-size: 16px;
+        }
+          .title {
+          color: #fff;
+        }
+        .des {
+          color: rgba(255, 255, 255, 0.432);
+        }
+  
+      }
+    }
+  }
+  .banlog {
+    width: 100%;
+    height: 270px;
+    flex-shrink: 0;
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
