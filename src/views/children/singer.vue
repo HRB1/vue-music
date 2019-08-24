@@ -29,7 +29,7 @@
 import MHeader from "../../components/m-header.vue";
 import jsonp from "jsonp";
 import BScroll from "better-scroll";
-import { setTimeout } from "timers";
+import { setTimeout, clearTimeout } from "timers";
 export default {
   props: {},
   components: {},
@@ -123,7 +123,7 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      setTimeout(() => {
+      this.timer=setTimeout(() => {
         this.scrolls();
         let childrens = [...this.$refs.items.children];
         childrens.forEach(item => {
@@ -132,6 +132,9 @@ export default {
         });
       }, 100);
     });
+  },
+  beforeDestroy(){
+      clearTimeout(this.timer);
   }
 };
 </script>
